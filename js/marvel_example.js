@@ -24,14 +24,14 @@ $(function(){
                     output += '<li class="collection-item avatar"><img src="' + imgPath + '"><br>'+results[i].title+'</li>';
                 }
             }  
-            output += '</ul>'
+            output += '</ul>';
             $('#results').append(output);
         })
         .fail(function (xhr, txtStatus, error) {
-            console.log(txtStatus+" "+error)
-        })       
+            console.log(txtStatus+" "+error);
+        })
         .ajaxStart(function (){
-            $('#spinner').show()
+            $('#spinner').show();
         })
         .ajaxStop(function () {
             $('#spinner').fadeout().hide();
