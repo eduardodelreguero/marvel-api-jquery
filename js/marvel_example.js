@@ -8,7 +8,7 @@ const API_KEY = "3ab1a7ad6985002c87082ccfee891dd9";
 const PRIV_KEY = "f92001eb96c00a07b6d9f66d1b108a8ec51d51ab";
 
 $(function(){
-    var marvelAPI = 'https://gateway.marvel.com/v1/public/series';
+    var marvelAPI = 'https://gateway.marvel.com/v1/public/characters';
     //getJSON documentation: http://api.jquery.com/jquery.getjson/
     $.getJSON( marvelAPI, {
         apikey: API_KEY
@@ -19,7 +19,7 @@ $(function(){
             let output = '<ul class="collection">'; 
           
             for(let i=0; i<resultsSize; i++){
-                if(results[i].images.length > 0) {
+                if(results[i].thumbnail.length > 0) {
                     var imgPath = results[i].thumbnail.path + '/standard_xlarge.' + results[i].thumbnail.extension;
                     output += '<li class="collection-item avatar"><img src="' + imgPath + '"><br>'+results[i].title+'</li>';
                 }
