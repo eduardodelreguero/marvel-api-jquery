@@ -9,11 +9,11 @@ const PRIV_KEY = "f92001eb96c00a07b6d9f66d1b108a8ec51d51ab";
 
 $(function(){
     var marvelAPI = 'https://gateway.marvel.com/v1/public/series';
-    //getJSON
+    //getJSON documentation: http://api.jquery.com/jquery.getjson/
     $.getJSON( marvelAPI, {
         apikey: API_KEY
         })
-        .done(function( response ) {
+        .done(function (response) {
             let results = response.data.results;
             let resultsSize = results.length;
             let output = '<ul class="collection">'; 
@@ -27,5 +27,14 @@ $(function(){
             output += '</ul>'
             $('#results').append(output);
         })
-        .       
+        .fail(function (xhr, txtStatus, error) {
+            console.log(txtStatus+" "+error)
+        })       
+        .ajaxStart(function (){
+            $('#spinner').show()
+        })
+        .ajaxStop(function () {
+            $('#spinner').fadeout().hide();
+        })
 });
+
