@@ -18,11 +18,9 @@ $(function(){
             let resultsSize = results.length;
             let output = '<ul class="collection">'; 
           
-            for(let i=0; i<resultsSize; i++){
-                if(results[i].thumbnail.length > 0) {
-                    var imgPath = results[i].thumbnail.path + '/standard_xlarge.' + results[i].thumbnail.extension;
-                    output += '<li class="collection-item avatar"><img src="' + imgPath + '"><br>'+results[i].title+'</li>';
-                }
+            for (let i=0; i<resultsSize; i++){
+                var imgPath = results[i].thumbnail.path + '/standard_xlarge.' + results[i].thumbnail.extension;
+                output += '<li class="collection-item avatar"><img src="' + imgPath + '"><br>'+results[i].title+'</li>';
             }  
             output += '</ul>';
             $('#results').append(output);
