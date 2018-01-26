@@ -8,7 +8,8 @@ const API_KEY = "3ab1a7ad6985002c87082ccfee891dd9";
 const PRIV_KEY = "f92001eb96c00a07b6d9f66d1b108a8ec51d51ab";
 
 $(function(){
-    var marvelAPI = 'https://gateway.marvel.com/v1/public/comics';
+    var marvelAPI = 'https://gateway.marvel.com/v1/public/series';
+    //getJSON
     $.getJSON( marvelAPI, {
         apikey: API_KEY
         })
@@ -25,5 +26,6 @@ $(function(){
             }  
             output += '</ul>'
             $('#results').append(output);
-        });       
+        })
+        .       
 });
