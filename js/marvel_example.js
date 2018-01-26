@@ -20,7 +20,7 @@ $(function(){
           
             for (let i=0; i<resultsSize; i++){
                 var imgPath = results[i].thumbnail.path + '/standard_xlarge.' + results[i].thumbnail.extension;
-                output += '<li class="collection-item avatar"><img src="' + imgPath + '"><br>'+results[i].title+'</li>';
+                output += '<li class="collection-item avatar"><img src="' + imgPath + '"><br>'+results[i].name+'</li>';
             }  
             output += '</ul>';
             $('#results').append(output);
