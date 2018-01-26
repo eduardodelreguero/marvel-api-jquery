@@ -27,10 +27,10 @@ $(function(){
             output += '</ul>';
             $('#results').append(output);
         })
-        .fail(function (xhr, txtStatus, error) {
+/*        .fail(function (xhr, txtStatus, error) {
             console.log(txtStatus+" "+error);
         })
-/*        .ajaxStart(function (){
+        .ajaxStart(function (){
             $('#spinner').show();
         })
         .ajaxStop(function () {
