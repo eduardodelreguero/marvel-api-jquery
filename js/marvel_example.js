@@ -20,7 +20,7 @@ $(function(){
           
             for(let i=0; i<resultsSize; i++){
                 if(results[i].images.length > 0) {
-                    var imgPath = results[i].images[0].path + '/standard_xlarge.' + results[i].images[0].extension;
+                    var imgPath = results[i].thumbnail.path + '/standard_xlarge.' + results[i].thumbnail.extension;
                     output += '<li class="collection-item avatar"><img src="' + imgPath + '"><br>'+results[i].title+'</li>';
                 }
             }  
